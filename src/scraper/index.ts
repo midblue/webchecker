@@ -51,7 +51,9 @@ const watchers = ['jasperstephenson@gmail.com']
 // }
 
 const scrape = async () => {
-  const browser = await puppeteer.launch()
+  const browser = await puppeteer.launch({
+    args: ['--no-sandbox'],
+  })
   const page = await browser.newPage()
 
   // * ----- rental -----

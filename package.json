@@ -1,7 +1,7 @@
 {
   "scripts": {
     "server": "ssh root@143.198.63.63",
-    "golive": "git push && ssh root@143.198.63.63 'cd ./webchecker/server; git pull; source ~/.nvm/nvm.sh && source ~/.profile && npm install; pm2 restart webchecker && pm2 logs webchecker'",
+    "golive": "git push && ssh root@143.198.63.63 'cd ./webchecker; git pull; source ~/.nvm/nvm.sh && source ~/.profile && npm install; pm2 restart webchecker && pm2 logs webchecker'",
     "logs": "ssh root@143.198.63.63 'source ~/.nvm/nvm.sh && source ~/.profile && pm2 logs webchecker'",
     "build": "tsc -w",
     "bo": "tsc",
@@ -15,7 +15,7 @@
     "express": "^4.18.1",
     "nodemailer": "^6.8.0",
     "nodemon": "^2.0.20",
-    "puppeteer": "^18.2.1"
+    "puppeteer": "1.10.0"
   },
   "devDependencies": {
     "@types/express": "^4.17.14",
